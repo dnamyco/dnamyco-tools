@@ -1,6 +1,6 @@
-# DNAMA-Tools Docker Image
+# DNAMYCO-Tools Docker Image
 
-This Docker image is specifically crafted to enable smooth operation of the DNAMA-Tools suite. The suite includes ITSx for identifying and extracting Internal Transcribed Spacer (ITS) sequences from genomic data, HMMER for biosequence analysis, and Guppy, an Oxford Nanopore basecaller tool for reading sequencing data. These tools are encased in a robust, containerized environment based on Fedora Linux, allowing seamless bioinformatics workflow.
+This Docker image is specifically crafted to enable smooth operation of the DNAMYCO-Tools suite. The suite includes ITSx for identifying and extracting Internal Transcribed Spacer (ITS) sequences from genomic data, HMMER for biosequence analysis, and Guppy, an Oxford Nanopore basecaller tool for reading sequencing data. These tools are encased in a robust, containerized environment based on Fedora Linux, allowing seamless bioinformatics workflow.
 
 ## System Requirements
 
@@ -13,19 +13,19 @@ Note: If you do not have a GPU or do not wish to use one, or if you're running D
 
 ### Download the Docker Image
 
-To fetch the DNAMA-Tools Docker image from the image registry, open your terminal and execute the following command:
+To fetch the DNAMYCO-Tools Docker image from the image registry, open your terminal and execute the following command:
 
 ```bash
-docker pull dnama-tools:latest
+docker pull dnamyco-tools:latest
 ```
 
 ### Executing Commands
 
-The DNAMA-Tools Docker image supports a range of commands for different tools included in the suite:
+The DNAMYCO-Tools Docker image supports a range of commands for different tools included in the suite:
 
 ## Subcommands
 
-The DNAMA-Tools Docker image supports a range of subcommands corresponding to different tools included in the suite. Here's a list of the current supported subcommands:
+The DNAMYCO-Tools Docker image supports a range of subcommands corresponding to different tools included in the suite. Here's a list of the current supported subcommands:
 
 ### ITSx
 - `ITSx`: Command for ITSx tool for identifying and extracting Internal Transcribed Spacer (ITS) sequences from genomic data.
@@ -64,10 +64,10 @@ The DNAMA-Tools Docker image supports a range of subcommands corresponding to di
 - `bam_convert`
 - `minimap2`
 
-You can pass any of these subcommands after `dnama-tools:latest` in the `docker run` command, followed by the appropriate arguments for the subcommand. For example:
+You can pass any of these subcommands after `dnamyco-tools:latest` in the `docker run` command, followed by the appropriate arguments for the subcommand. For example:
 
 ```bash
-docker run -v /path/to/input:/data -v /path/to/output:/output dnama-tools:latest hmmscan <arguments>
+docker run -v /path/to/input:/data -v /path/to/output:/output dnamyco-tools:latest hmmscan <arguments>
 ```
 
 In the command above, `hmmscan` is a subcommand for running the HMMER tool. Replace `<arguments>` with the arguments you want to pass to the `hmmscan` command.
@@ -87,13 +87,13 @@ git clone https://github.com/your/repo.git
 3. Build the Docker image using the Dockerfile:
 
 ```bash
-docker build -t dnama-tools:latest .
+docker build -t dnamyco-tools:latest .
 ```
 
 4. Test the image locally to ensure it operates as expected:
 
 ```bash
-docker run dnama-tools:latest itsx --help
+docker run dnamyco-tools:latest itsx --help
 ```
 
 5. If everything functions correctly, commit your changes and push them to your repository.
